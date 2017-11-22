@@ -2,7 +2,6 @@
 
 This simple program demonstrates how a Markov network can be applied to the problem of image denoising.
 
-Run as:
 ```bash
 # To run with default values of parameters w_e and w_s, execute
 python input.png
