@@ -10,3 +10,4 @@ python input.png
 python input.png 8 10
 ```
 
+See https://blog.statsbot.co/probabilistic-graphical-models-tutorial-d855ba0107d1 for the full blog post explaining the example.
