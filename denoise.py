@@ -26,7 +26,7 @@ def denoise_image(X, w_e, w_s):
   Y = np.copy(X)
   # optimization
   max_iter = 10*m*n
-  for iter in xrange(max_iter):
+  for iter in range(max_iter):
     # randomly pick a location
     i = np.random.randint(m)
     j = np.random.randint(n)
@@ -44,7 +44,7 @@ def denoise_image(X, w_e, w_s):
 
 # preprocessing step
 def read_image_and_binarize(image_file):
-  im = Image.open('test_image1.png').convert("L")
+  im = Image.open(image_file).convert("L")
   A = np.asarray(im).astype(int)
   A.flags.writeable = True
 
@@ -54,8 +54,8 @@ def read_image_and_binarize(image_file):
 
 def add_noise(orig):
   A = np.copy(orig)
-  for i in xrange(np.size(A, 0)):
-    for j in xrange(np.size(A, 1)):
+  for i in range(np.size(A, 0)):
+    for j in range(np.size(A, 1)):
       r = np.random.rand()
       if r < 0.1:
         A[i][j] = -A[i][j]
